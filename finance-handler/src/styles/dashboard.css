@@ -10,7 +10,7 @@
 }
 
 body {
-    padding: 5rem 2rem 2rem;
+    padding: 7rem 2rem 2rem;
     background: var(--bg-gradient);
     background-attachment: fixed;
     min-height: 100vh;
