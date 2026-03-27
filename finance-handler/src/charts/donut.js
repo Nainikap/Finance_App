@@ -1,4 +1,4 @@
-import react from "react";
+//import react from "react";
 import { Doughnut } from "react-chartjs-2";
 import "../chartConfig";
 
