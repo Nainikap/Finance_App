@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* body{
+    overflow-y: hidden;
+} */
+
+.nav {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 600px;             
+  border-radius: 25px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(207, 194, 212, 0.8);
+
+  transition:
+    background-color 0.4s ease,
+    backdrop-filter 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+
+.navbar {
+  display: flex;
+  gap: 80px;
+  overflow: hidden;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 26px;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 100;
+  line-height: 1.2;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  /* bottom: -px; */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+/* smooth hover line */
+.navbar a:hover::before {
+  width: 100%;
+}
+
+@media (max-width:768px){
+  .nav .navbar a{
+    font-size: 18px;
+      font-weight: 100;
+  /* line-height: 08; */
+
+  }
+  .nav .navbar{
+      gap: 40px;
+  }
+  .nav .header{
+    padding: 15px 25px;
+  }
+}

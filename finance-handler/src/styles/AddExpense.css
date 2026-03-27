@@ -1,0 +1,146 @@
+/* Custom Properties to match Dashboard */
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --accent-purple: #cbb2e5;
+    --text-dim: #b5a1c0;
+}
+body{
+    padding: 5rem 2rem 2rem;
+    overflow-y: auto;
+}
+.expenses {
+    display: flex;
+    gap: 3rem;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+/* Form Container */
+.add-expense {
+    flex: 1;
+    background: rgba(215, 191, 237, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 2rem;
+    padding: 2.5rem;
+    color: white;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form Elements */
+.add-expense label {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--accent-purple);
+    font-weight: 500;
+}
+
+.add-expense input[type="text"],
+.add-expense input[type="number"],
+.add-expense input[type="date"],
+.add-expense input[type="file"],
+.add-expense textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid var(--glass-border);
+    border-radius: 0.8rem;
+    padding: 0.8rem 1rem;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.add-expense input:focus, 
+.add-expense textarea:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 10px rgba(203, 178, 229, 0.2);
+}
+
+/* Radio Buttons */
+.add-expense input[type="radio"] {
+    margin-right: 8px;
+    margin-left: 15px;
+    accent-color: var(--accent-purple);
+}
+
+/* Buttons */
+.add-expense button {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.add-expense button[type="submit"] {
+    background: var(--accent-purple);
+    color: #171717;
+    margin-left: 1rem;
+}
+
+.add-expense button[type="reset"] {
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: white;
+}
+
+.add-expense button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Transactions Sidebar */
+.transactions {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    padding: 2.5rem;
+    border: 1px solid var(--glass-border);
+    color: white;
+}
+
+.transactions h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    color: var(--accent-purple);
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 0.5rem;
+}
+
+.transactions h3:first-child {
+    margin-top: 0;
+}
+
+/* List Items */
+.transactions .row {
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 0.8rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: background 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.transactions .row:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(203, 178, 229, 0.3);
+}
+
+.transactions .col {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+}

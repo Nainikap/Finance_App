@@ -1,0 +1,111 @@
+/* Custom properties for consistency */
+:root {
+    --bg-dark: rgb(15, 10, 25);
+    --bg-gradient: linear-gradient(135deg, #0f0a19 0%, #210821 100%);
+    --glass-purple: rgba(204, 182, 224, 0.15); /* Translucent glass effect */
+    --accent-purple: #cbb2e5;
+    --card-border: rgba(255, 255, 255, 0.1);
+    --text-main: #ffffff;
+    --text-muted: #b5a1c0;
+}
+
+body {
+    padding: 5rem 2rem 2rem;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    /* padding: 2rem; */
+    overflow-x: hidden;
+}
+
+.dashboard {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+/* Card Styling (Mastercard & Wallet) */
+.curr-expenses {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.dashboard .curr-expenses .card, 
+.dashboard .curr-expenses .wallet {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px); /* The "Glass" effect */
+    border: 1px solid var(--card-border);
+    border-radius: 2rem;
+    width: 400px;
+    height: 220px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: transform 0.3s ease;
+    color:white;
+    font-size: 50px;
+}
+
+.dashboard .curr-expenses .card:hover,
+.dashboard .curr-expenses .wallet:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-purple);
+}
+
+/* Specific styling for the card numbers */
+.card div:first-child {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+/* Graphs Section */
+.comparison {
+    display: flex;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid var(--card-border);
+}
+
+/* Sidebar History Styling */
+.transaction-history {
+    flex: 1; /* Allows it to fill remaining space */
+    min-width: 220px;
+    background: rgba(215, 191, 237, 0.08); /* Much lighter than before */
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    border-radius: 2.5rem;
+    padding: 2.5rem;
+    color: var(--text-main);
+}
+
+.transaction-history hr {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 1.5rem 0;
+}
+
+.transaction-history-row div {
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 0.5rem;
+    border-radius: 0.8rem;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #fff, #cbb2e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
